@@ -33,7 +33,7 @@ const Form = (props) => {
         </div>
 
    {/* Add Toppings */}
-   <div className="sauce">
+   <div className="toppings">
             <h2>Add Toppings</h2>
             <p>Choose up to 10</p>
             <div>
@@ -54,6 +54,28 @@ const Form = (props) => {
                     <input name="toppings" type="checkbox" value="Extra Cheese" />Extra Cheese
                 </form>
                 </div>
+        </div>
+
+
+          {/* choice of substitute */}
+          <div className="substitute">
+            <h2>Choice of Substitute</h2>
+            <p>Choose up to 1</p>
+
+            <form className="substitute" onChange={props.handleClickGluten}>
+                <input name="substitute" type="checkbox" value="gluten" />Gluten Free (= $1.00)
+            </form>
+        </div>
+
+
+
+        {/* special instructions */}
+        <div className="substitute">
+            <h2>Special Instructions</h2>
+
+            <form className="substitute" onChange={props.handleClickGluten}>
+                <input name="substitute" type="text" value={props.instructions} size="60" placeholder="Anytihng you would like to add?"/>
+            </form>
         </div>
     </div>
   );
