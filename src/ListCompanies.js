@@ -10,7 +10,7 @@ const [datatwo,setDatatwo] = useState(CompanyDataTwo)
 
 
   return (
-    <div>
+    <div><h1>Food Delivery Options</h1>
         <div className="listcompanies">
             {props.data.map(org => {
               return (
