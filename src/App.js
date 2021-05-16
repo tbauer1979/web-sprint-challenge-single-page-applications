@@ -1,10 +1,9 @@
 import React, {useState} from "react";
-import { BrowserRouter as Router,Switch, Route,Link} from "react-router-dom";
-import Home from './Home'
+import { BrowserRouter as Router, Route,Link} from "react-router-dom";
 import CompanyData from './CompanyData'
 import Form from './Form'
 import HomeNav from "./Home-Nav";
-
+import ListCompanies from "./ListCompanies";
 
 const App = (props) => {
 
@@ -49,19 +48,41 @@ const handleClickInstruct = (event) => {
 
   return (
     <div className="app">
-  
-      <Home data={data}/>  
-      <h1></h1>
+      <div className="header">
+          <div className="title">Lambda Eats</div>
+                 <div><Router> 
+                    <Link to="/" className="navbuttons">Home</Link>
+                    <Link to="/order" className="navbuttons" >Order Now</Link>
+                </Router>
+          </div>
+      </div>
+
+
+
+        <HomeNav data={data}/>  
+
+
+
+
+
 
 <Router>
-      <Route path="/order"> <Form 
-          handleClickSize={handleClickSize}
+      <Route exact path="/order"><Form handleClickSize={handleClickSize}
           handleClickSauce={handleClickSauce}
           handleClickToppings={handleClickToppings}
           handleClickGluten={handleClickGluten}
-          handleClickInstruct={handleClickInstruct}/> </Route>
+          handleClickInstruct={handleClickInstruct} /> /></Route>
+      <Route exact={true} path="/"> 
+            <div className="test"><ListCompanies data={data} /></div>
+      </Route>
       </Router>
+  
     </div>
   );
 };
 export default App;
+
+
+
+
+          

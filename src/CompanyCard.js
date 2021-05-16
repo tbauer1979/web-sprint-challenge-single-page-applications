@@ -3,7 +3,7 @@ import React from "react";
 
 const CompanyCard = (props) => {
 
-    const {company,type,wait,fee} = props
+    const {company,type,wait,fee, data} = props
 
 
 

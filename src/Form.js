@@ -4,7 +4,7 @@ const Form = (props) => {
 
 
   return (
-    <div><h1>Build Your Own Pizza</h1>
+    <div className="form"><h1>Build Your Own Pizza</h1>
    {/* SIZE OF PIZZA */}
         <div className="size">
             <h2>Choice of Size</h2>
