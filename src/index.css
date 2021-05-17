@@ -51,6 +51,16 @@ code {
   flex-direction: row;
 }
 
+.toppings {
+  display: flex;
+  flex-direction: row;
+  
+}
+
+.topping {
+  height: 20px;
+  margin-right: 5px;
+}
 .CompanyCard {
   width: 100%;
 }
@@ -63,4 +73,12 @@ code {
 
 .form {
   margin: auto;
+}
+
+.newCard {
+  margin-right: 100px;
+}
+
+.order {
+  font-weight: bold;
 }
